@@ -1,0 +1,96 @@
+.title
+{
+    display: block;
+    text-align: center;
+    color: darksalmon;
+    padding: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+.main
+{
+    display: block;
+    text-align: center;
+}
+.list
+{
+    display: inline-block;
+    width: 600px;
+    height: auto;
+    border: 2px solid darkgray;
+    box-shadow: 10px 10px 5px darkgray;
+    background: cornsilk;
+    text-align: center;
+}
+.list ul
+{
+    list-style:none;
+    padding: 0px;
+}
+.list li
+{
+    border-top: 1px solid darkgray;
+    font-size: 18px;
+    font-family: "等线";
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+}
+.list li:first-child
+{
+    border-top: none;
+}
+.box
+{
+    position: absolute;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.box:checked + label
+{
+    color: #bdbdbd;
+    font-style: oblique;
+    text-decoration: line-through;
+}
+#del
+{
+    position: absolute;
+    right: 0px;
+    background-color: darksalmon;
+    color: beige;
+    border: none;
+    font-family: "华文细黑";
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+#del:hover
+{
+    background-color: rgb(185, 92, 61);
+}
+.newli
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 300px;
+    height: 25px;
+    border-radius: 3px;
+    border: 3px solid sandybrown;
+    color: saddlebrown;
+    
+}
+.newli:focus
+{
+    border: 3px solid saddlebrown;
+}
+#info
+{
+    display: block;
+    margin-top: 10px;
+    font-size: small;
+    color: slategray;
+}

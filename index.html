@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <title>todolist</title>
+</head>
+<body background="68304229_p0.jpg" style="background-attachment:fixed;background-size:cover;">
+    <div class="title">
+        TODOLIST
+    </div>
+    <div class="main">
+        <div class="list">
+            <span id="info">-说明- 基于vue。双击项目可以编辑，结束修改时回车确认修改；esc撤销修改。</span>
+            <input placeholder="在此处键入新项目并回车" class="newli" type="text" v-on:keyup.enter="new_li" v-model="addtext"/>
+            <ul>
+                <li class="sig_li" v-for="item in list">
+                    <input class="box" type="checkbox" v-model="item.isFin">
+                    <label id="item" @dblclick=edt_li(item) v-if="!item.isEditing">{{item.title}}</label>
+                    <button id="del" @click="del_li(item)">删除</button>
+                    <input
+                        class="edit"
+                        type="text"
+                        v-model="edtext"
+                        v-if="item.isEditing"
+                        v-on:keyup.enter="finedt_li(item)"
+                        v-on:keyup.esc="cancedt_li(item)"
+                    />
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="vue.js"></script>
+<script src="main.js"></script>
+</html>
